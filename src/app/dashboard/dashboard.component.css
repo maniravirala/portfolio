@@ -1,0 +1,39 @@
+
+/* ----------------- Home ----------------- */
+/* .home{
+    margin: 10vh 10%;
+} */
+
+.home h1{
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.home button{
+    border: 2px solid var(--bg-secondary);
+    font-size: 20px;
+} 
+
+.home .socialIcons li a{
+    text-decoration: none;
+}
+
+.home .skills{
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.home .welcome div{
+    padding: 10px 0px;
+}
+
+
+/* ----------------- About ----------------- */
+.about .details .name{
+    font-size: 26px;
+}
+
+.about .details span{
+    font-size: 18px;
+    font-weight: 600;
+}

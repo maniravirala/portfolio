@@ -1,0 +1,76 @@
+<div class="container fixed backdrop-blur-lg ">
+  <div class="logo">
+    <img class="h-12" src="../../assets/images/logo.ico" alt="logo" />
+  </div>
+  <div class="navLinks">
+    <ul>
+      <li>
+        <a
+          (click)="toHome()"
+          class="nav-link cursor-pointer"
+          [ngClass]="{ 'active': isActive === 'home' }"
+          (mouseenter)="setActive('home')"
+          (mouseleave)="clearActive()"
+        >
+          Home
+        </a>
+      </li>
+      <li>
+        <a
+          (click)="toAbout()"
+          class="nav-link cursor-pointer"
+          [ngClass]="{ 'active': isActive === 'aboutme' }"
+          (mouseenter)="setActive('aboutme')"
+          (mouseleave)="clearActive()"
+        >
+          About
+        </a>
+      </li>
+      <li>
+        <a
+          (click)="toSkills()"
+          class="cursor-pointer"
+          [ngClass]="{ 'active': isActive === 'skills' }"
+          (mouseenter)="setActive('skills')"
+          (mouseleave)="clearActive()"
+        >
+          Skills
+        </a>
+      </li>
+      <li>
+        <a
+          (click)="toEducation()"
+          class="nav-link cursor-pointer"
+          [ngClass]="{ 'active': isActive === 'education' }"
+          (mouseenter)="setActive('education')"
+          (mouseleave)="clearActive()"
+        >
+          Education
+        </a>
+      </li>
+      <li>
+        <a
+          (click)="toProject()"
+          class="cursor-pointer"
+          [ngClass]="{ 'active': isActive === 'project' }"
+          (mouseenter)="setActive('project')"
+          (mouseleave)="clearActive()"
+        >
+          Projects
+        </a>
+      </li>
+      <li>
+        <a
+          (click)="toContact()"
+          class="nav-link cursor-pointer"
+          [ngClass]="{ 'active': isActive === 'contactus' }"
+          (mouseenter)="setActive('contactus')"
+          (mouseleave)="clearActive()"
+        >
+          Contact
+        </a>
+      </li>
+    </ul>
+    
+  </div>
+</div>

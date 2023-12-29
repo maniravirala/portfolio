@@ -1,0 +1,182 @@
+<app-navbar class="relative z-20 left-0 flex justify-center"></app-navbar>
+
+<!-- <app-particles></app-particles> -->
+
+<section
+  id="home"
+  class="relative home px-[10%] pt-[20vh] pb-[20vh] text-secondary flex justify-between items-center"
+>
+  <div class="absolute -z-10 min-h-screen h-full w-full left-0">
+    <img
+      alt=""
+      sizes="100vw"
+      src="../../assets/images/herobgc.webp"
+      decoding="async"
+      data-nimg="fill"
+      class="object-bottom"
+      loading="lazy"
+      style="
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        inset: 0px;
+        object-fit: cover;
+        color: transparent;
+      "
+    />
+  </div>
+  <img
+    src="../../assets/images/bgHome.svg"
+    alt="bg"
+    class="absolute hidden md:block right-0 bottom-0 opacity-25 lg:opacity-60"
+  />
+
+  <div class="welcome">
+    <div class="font-bold">
+      <h1>Hi There!</h1>
+      <h1>
+        I'm <span class="text-tertiary">{{ dataArray.name }}</span>
+      </h1>
+    </div>
+    <div class="skills flex">
+      <span class="pr-3"> I am into </span>
+      <ngx-typed-js
+        [strings]="dataArray.skillArray"
+        [loop]="true"
+        [showCursor]="true"
+        [typeSpeed]="50"
+        [backSpeed]="50"
+      >
+        <span class="typing text-[#940808]"></span>
+      </ngx-typed-js>
+    </div>
+    <div>
+      <button class="py-2 px-5 bg-white rounded-[20px]">About Me</button>
+    </div>
+    <div class="socialIcons">
+      <ul class="flex gap-[10px]">
+        <li class="">
+          <a
+            class="bg-primary rounded-[50%] w-[45px] h-[45px] list-none flex items-center justify-center cursor-pointer"
+            [href]="dataArray.social.linkedin"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin text-[#00d9ff]"></i>
+          </a>
+        </li>
+        <li class="">
+          <a
+            class="bg-primary rounded-[50%] w-[45px] h-[45px] list-none flex items-center justify-center cursor-pointer"
+            [href]="dataArray.social.github"
+            target="_blank"
+            ><i class="fa-brands fa-github text-[#00d9ff]"></i
+          ></a>
+        </li>
+        <li class="">
+          <a
+            class="bg-primary rounded-[50%] w-[45px] h-[45px] list-none flex items-center justify-center cursor-pointer"
+            [href]="dataArray.social.twitter"
+            target="_blank"
+            ><i class="fa-brands fa-twitter text-[#00d9ff]"></i
+          ></a>
+        </li>
+        <li class="">
+          <a
+            class="bg-primary rounded-[50%] w-[45px] h-[45px] list-none flex items-center justify-center cursor-pointer"
+            [href]="dataArray.social.instagram"
+            target="_blank"
+            ><i class="fa-brands fa-instagram text-[#00d9ff]"></i
+          ></a>
+        </li>
+        <li class="">
+          <a
+            class="bg-primary rounded-[50%] w-[45px] h-[45px] list-none flex items-center justify-center cursor-pointer"
+            [href]="dataArray.social.telegram"
+            target="_blank"
+            ><i class="fa-brands fa-telegram text-[#00d9ff]"></i
+          ></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="picture w-[40%]">
+    <img
+      class="rounded-[50%]"
+      src="../../assets/images/portrait.jpeg"
+      alt="pic"
+    />
+  </div>
+</section>
+
+<section class="about px-[20vw] py-10 mb-20" id="aboutme">
+  <div class="mb-10 text-center text-[24px]">
+    <span class="border-b-2 border-tertiary">ABOUT ME</span>
+  </div>
+
+  <div class="details mb-4">
+    <span class="name block">I'm {{ dataArray.fname }}</span>
+    <span class="">Full Stack Developer</span>
+  </div>
+  <div class="bio mb-4">
+    I am a Full-Stack developer. I am currently pursuing Computer Science from
+    LPU Punjab. I am very passionate about improving my coding skills &
+    developing applications & websites. I build WebApps and Websites using MERN
+    Stack. Love to solve real life problems with my experience and knowledge.
+  </div>
+  <div class="details mb-6">
+    <div class="mail"><span class="">Email: </span>{{ dataArray.mail }}</div>
+    <div class="place"><span class="">Place: </span>{{ dataArray.place }}</div>
+  </div>
+  <div class="resumeButton">
+    <button class="py-2 px-5 rounded-[20px] border-2 border-tertiary">
+      View Resume
+    </button>
+  </div>
+</section>
+
+<section class="education mb-20" id="education">
+  <div class="text-center text-[24px]">
+    <span class="border-b-2 border-tertiary">My Education</span>
+  </div>
+  <div class="mb-10 mt-2 text-center">
+    <span class=""
+      >Education is not the learning of facts, but the training of the mind to
+      think.</span
+    >
+  </div>
+  <div
+    class="relative mb-20 lg:container sm:mx-4 lg:mx-auto lg:w-5/6 2xl:w-3/4 wrap overflow-hidden p-4 md:py-10 md:px-0"
+  >
+    <div
+      class="left-6 md:left-1/2 absolute border-opacity-20 border-gray-700 dark:border-grey-800 h-full border"
+    ></div>
+    <div
+      *ngFor="let item of dataArray.education; index as i"
+      [class.flex-row-reverse]="i % 2 == 0"
+      class="flex justify-between items-center w-full mb-10"
+    >
+      <div class="order-1 md:w-5/12"></div>
+      <div
+        class="bg-[#ddd6fe] z-20 flex items-center order-1 justify-center w-9 h-9 rounded-full ring-8 ring-[#f2f2f2]"
+      >
+        <img src="../../assets/images/edu.svg" alt="edu" />
+      </div>
+      <div
+        class="bg-[#f1f1f1] items-center order-1 flex justify-between md:w-5/12 rounded-lg w-full ml-0 p-4"
+      >
+        <div class="flex justify-center flex-col w-[75%]">
+          <h3 class="mb-2 font-medium text-xl">
+            {{ item.school }}
+          </h3>
+          <span class="text-sm font-medium text-gray-700"
+            >{{ item.field }} | {{ item.batch }}</span
+          >
+        </div>
+        <div class="w-[20%]">
+          <img src="../../assets/images/{{item.logo}}" alt="cse" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

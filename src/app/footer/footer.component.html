@@ -1,0 +1,78 @@
+<div class="relative" id="contactus">
+  <div
+    #floatBox
+    class="bg-[#7824d2] mx-40 p-10 mb-20 rounded-3xl flex justify-center gap-x-6"
+  >
+    <div class="flex flex-col justify-between">
+      <div>
+        <label class="text-white w-20 inline-block" for="name">Name</label>
+        <input
+          class="bg-[#f3f4f640] outline-none text-white p-1 border-none rounded-lg"
+          type="text"
+          name="name"
+          id="name"
+        />
+      </div>
+      <div>
+        <label class="text-white w-20 inline-block" for="email">Email</label>
+        <input
+          class="bg-[#f3f4f640] outline-none text-white p-1 border-none rounded-lg"
+          type="email"
+          name="email"
+          id="email"
+        />
+      </div>
+      <div>
+        <label class="text-white w-20 inline-block" for="mobno">Mob No</label>
+        <input
+          class="bg-[#f3f4f640] outline-none text-white p-1 border-none rounded-lg"
+          type="tel"
+          name="mobno"
+          id="mobno"
+        />
+      </div>
+      <div>
+        <label class="text-white w-20 inline-block" for="subject">Subject</label>
+        <input
+          class="bg-[#f3f4f640] outline-none text-white p-1 border-none rounded-lg"
+          type="text"
+          name="subject"
+          id="subject"
+        />
+      </div>
+    </div>
+    <div class="flex">
+      <label class="text-white w-20 inline-block" for="message">Message</label>
+      <textarea
+        class="bg-[#f3f4f640] outline-none text-white p-2 border-none resize-none rounded-lg"
+        name="message"
+        id="message"
+        cols="30"
+        rows="6"
+      ></textarea>
+    </div>
+    <div class="flex flex-col justify-center gap-y-4">
+      <button
+        class="rounded-lg px-3 py-1 bg-[#f3f4f6]"
+      >
+        Send
+      </button>
+      <button class="text-white bg-[#5a21b6] rounded-lg px-3 py-1">
+        Reset
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="xl:max-w-6xl mx-auto md:mx-6 lg:mx-10 xl:mx-auto py-4 lg:py-6 flex flex-col-reverse md:flex-row gap-2 md:gap-0 justify-between items-center"
+>
+  <p class="text-sm mt-2 md:mt-0">
+    Made with<span class="animate-pulse"> ❤️ </span>by<span
+      class="text-[#5a21b6]"
+    >
+      {{name}}</span
+    >
+  </p>
+  
+</div>

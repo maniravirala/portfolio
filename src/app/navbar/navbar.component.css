@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 8vw;
+    max-width: none;
+    /* backdrop-filter: blur(10px);  */
+}
+
+.navLinks ul{
+    display: flex;
+}
+
+.navLinks ul li{
+    list-style: none;
+    padding: 0 20px;
+}
+
+a{
+    color: var(--bg-primary);
+    letter-spacing: 0.04rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.active{
+    padding-bottom: 4px;
+    border-bottom: 2px solid var(--text-primary);
+}
+

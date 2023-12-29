@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    --bg-primary: #060230;
+    --bg-secondary: #002057;
+    --text-primary: #fec903;
+    /* --text-primary: #e6b42d; */
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    /* font-family: "Poppins", sans-serif; */
+    font-family: "Poppins", cursive;
+}
+
+body::-webkit-scrollbar{
+    width: 8px;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: var(--bg-secondary);
+}
+
+/* body::-webkit-scrollbar-track-piece{
+    background-color: rgb(235, 202, 245);
+} */

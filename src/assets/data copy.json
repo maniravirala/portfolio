@@ -1,0 +1,46 @@
+{
+  "fname": "Mani",
+  "lname": "Ravirala",
+  "name": "Mani Ravirala",
+  "mail": "taskmate3@gmail.com",
+  "mobile": "+91 830*****50",
+  "place": "Puttapaka, Telangana",
+  "skill": "Full Stack Developer",
+  "favicon": "logo.ico",
+  "profile": "profile.jpeg",
+  "skillArray": [
+    "Web Development",
+    "Web Designing",
+    "Frontend Development",
+    "Backend Development",
+    "Full Stack Development"
+  ],
+  "social": {
+    "github": "https://github.com/maniravirala/",
+    "linkedin": "https://www.linkedin.com/in/maniravirala/",
+    "twitter": "https://twitter.com/mani_ravirala",
+    "instagram": "https://www.instagram.com/findingstatus4life",
+    "telegram": "https://telegram.me/maniravirala"
+  },
+
+  "education": [
+    {
+      "field": "B.Tech CSE",
+      "school": "Lovely Professional University (LPU)",
+      "batch": "2021-2025",
+      "logo" : "cse.png"
+    },
+    {
+      "field": "Intermediate",
+      "school": "Narayana Junior Clg Kuntloor",
+      "batch": "2019-2021",
+      "logo": "inter.png"
+    },
+    {
+      "field": "Secondary School Education",
+      "school": "Zilla Parishad High School Puttpaka (ZPHS Puttapaka)",
+      "batch": "2018-2019",
+      "logo": "ssc.png"
+    }
+  ]
+}
