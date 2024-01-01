@@ -7,18 +7,27 @@ import {
   OnInit,
 } from '@angular/core';
 import { Component, Inject, Renderer2, ViewChild } from '@angular/core';
+import { SharedService } from '../shared/shared.service';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css'],
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit {
   constructor(
     @Inject(DOCUMENT) private document: Document,
-    private renderer: Renderer2
+    private renderer: Renderer2,
+    private sharedService: SharedService
   ) {}
 
+  dataArray: any = {};
+
+  ngOnInit() {
+    this.sharedService.getData().subscribe((data) => {
+      this.dataArray = data;
+    });
+  }
 
   toHome() {
     this.scrollToElement('home');
@@ -53,7 +62,7 @@ export class NavbarComponent {
       });
       return;
     }
-  
+
     if (element) {
       const elementRect = element.getBoundingClientRect().top;
       // i want to add the extra 100px to the scroll position so that the navbar doesn't overlap the section title when scrolling to it
@@ -63,7 +72,7 @@ export class NavbarComponent {
 
       const offsetPosition = elementPosition - offset;
 
-      console.log(offsetPosition,window.scrollY);
+      console.log(offsetPosition, window.scrollY);
       window.scrollTo({
         top: offsetPosition,
         behavior: 'smooth',
@@ -77,7 +86,7 @@ export class NavbarComponent {
     //   });
     // }
   }
-  
+
   isActive: string | null = null;
 
   setActive(fragment: string) {
@@ -87,5 +96,4 @@ export class NavbarComponent {
   clearActive() {
     this.isActive = null;
   }
-
 }

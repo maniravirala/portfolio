@@ -28,7 +28,7 @@
       "field": "B.Tech CSE",
       "school": "Lovely Professional University (LPU)",
       "batch": "2021-2025",
-      "logo" : "cse.png"
+      "logo": "cse.png"
     },
     {
       "field": "Intermediate",
@@ -41,6 +41,177 @@
       "school": "Zilla Parishad High School Puttpaka (ZPHS Puttapaka)",
       "batch": "2018-2019",
       "logo": "ssc.png"
+    }
+  ],
+  "description": "I am a Full-Stack developer. I am currently pursuing Computer Science from LPU Punjab. I am very passionate about improving my coding skills & developing applications & websites. I build WebApps and Websites using MERN Stack. Love to solve real life problems with my experience and knowledge.",
+
+  "stack": {
+    "frontend": {
+      "technologies": [
+        {
+          "name": "HTML",
+          "logo": "html.png"
+        },
+        {
+          "name": "CSS",
+          "logo": "css.png"
+        },
+        {
+          "name": "JavaScript",
+          "logo": "js.png"
+        },
+        {
+          "name": "React",
+          "logo": "react.png"
+        },
+        {
+          "name": "Bootstrap",
+          "logo": "bootstrap.png"
+        },
+        {
+          "name": "Material UI",
+          "logo": "mui.png"
+        }
+      ]
+    },
+    "backend": {
+      "technologies": [
+        {
+          "name": "Node",
+          "logo": "node.png"
+        },
+        {
+          "name": "MongoDB",
+          "logo": "mongo.png"
+        },
+        {
+          "name": "Express",
+          "logo": "express.png"
+        }
+      ]
+    },
+    "tools": {
+      "versionControl": [
+        {
+          "name": "Git",
+          "logo": "git.png"
+        },
+        {
+          "name": "GitHub",
+          "logo": "github.png"
+        }
+      ],
+      "codeEditor": {
+        "name": "VS Code",
+        "logo": "vscode.png"
+      },
+      "deployment": [
+        {
+          "name": "Heroku",
+          "logo": "heroku.png"
+        },
+        {
+          "name": "Netlify",
+          "logo": "netlify.png"
+        },
+        {
+          "name": "Firebase",
+          "logo": "firebase.png"
+        }
+      ],
+      "designTools": [
+        {
+          "name": "Figma",
+          "logo": "figma.png"
+        },
+        {
+          "name": "Adobe XD",
+          "logo": "xd.png"
+        },
+        {
+          "name": "Adobe Photoshop",
+          "logo": "ps.png"
+        },
+        {
+          "name": "Adobe Illustrator",
+          "logo": "ai.png"
+        },
+        {
+          "name": "Adobe After Effects",
+          "logo": "ae.png"
+        },
+        {
+          "name": "Adobe Premiere Pro",
+          "logo": "pr.png"
+        },
+        {
+          "name": "Adobe Lightroom",
+          "logo": "lr.png"
+        },
+        {
+          "name": "Adobe Audition",
+          "logo": "au.png"
+        },
+        {
+          "name": "Adobe InDesign",
+          "logo": "id.png"
+        },
+        {
+          "name": "Adobe Dreamweaver",
+          "logo": "dw.png"
+        }
+      ]
+    }
+  },
+  
+  "projects": [
+    {
+      "name": "Patient Management System",
+      "description": "A web application for managing patients in a hospital. It is a full stack application built using MERN Stack.",
+      "link": "",
+      "github": "",
+      "image": "pms.png",
+      "stack": ["React", "Node", "Express", "MongoDB", "Material U"]
+    },
+    {
+      "name": "RARA AI",
+      "description": "A Chrome Extension that helps you to get the response of your query in the popup window. It is built using JavaScript.",
+      "link": "",
+      "github": "",
+      "image": "rara.png",
+      "stack": ["JavaScript", "HTML", "CSS"]
+    },
+    {
+      "name": "Electricity Billing System",
+      "description": "A web application for managing electricity bills. It is a Frontend application built using HTML, CSS, JavaScript.",
+      "link": "",
+      "github": "",
+      "image": "ebs.png",
+      "stack": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "name": "Number System Converter",
+      "description": "An app for converting numbers from one system to another. It is an application built using python.",
+      "link": "",
+      "github": "",
+      "image": "nsc.png",
+      "stack": ["Python"]
+    },
+    {
+      "name": "Sanfoundry Quiz Scrapper",
+      "description": "A Chrome Extension that helps you to get the json data of the quiz in clipboard. It is built using JavaScript.",
+      "link": "",
+      "github": "",
+      "image": "sf.png",
+      "stack": ["JavaScript", "HTML", "CSS"]
+    },
+    {
+      "name": "Quiz Web App",
+      "description": "A web application for taking quiz. It is a Web application built using Angular and Firebase.",
+      "link": "",
+      "github": "",
+      "image": "quiz.png",
+      "stack": ["Angular", "Firebase", "HTML", "CSS", "JavaScript"]
     }
   ]
 }

@@ -15,6 +15,7 @@ import {NgxTypedJsModule} from 'ngx-typed-js';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ParticlesComponent } from './particles/particles.component';
 import { ScrollActiveDirective } from './directive/scroll-active.directive';
+import { SvgComponent } from './svg/svg.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ScrollActiveDirective } from './directive/scroll-active.directive';
     FooterComponent,
     ParticlesComponent,
     ScrollActiveDirective,
+    SvgComponent,
   ],
   imports: [
     BrowserModule,

@@ -4,7 +4,7 @@
 
 <section
   id="home"
-  class="relative home px-[10%] pt-[20vh] pb-[20vh] text-secondary flex justify-between items-center"
+  class="relative home px-[10%] pt-[23vh] pb-[20vh] text-secondary flex justify-between items-center"
 >
   <div class="absolute -z-10 min-h-screen h-full w-full left-0">
     <img
@@ -28,7 +28,7 @@
   <img
     src="../../assets/images/bgHome.svg"
     alt="bg"
-    class="absolute hidden md:block right-0 bottom-0 opacity-25 lg:opacity-60"
+    class="animated-svg absolute hidden md:block right-0 bottom-0 opacity-25 lg:opacity-60"
   />
 
   <div class="welcome">
@@ -51,7 +51,9 @@
       </ngx-typed-js>
     </div>
     <div>
-      <button class="py-2 px-5 bg-white rounded-[20px]">About Me</button>
+      <button (click)="toAbout()" class="py-2 px-5 bg-white rounded-[20px]">
+        About Me
+      </button>
     </div>
     <div class="socialIcons">
       <ul class="flex gap-[10px]">
@@ -98,29 +100,44 @@
       </ul>
     </div>
   </div>
-  <div class="picture w-[40%]">
-    <img
-      class="rounded-[50%]"
-      src="../../assets/images/portrait.jpeg"
-      alt="pic"
-    />
+  <div class="picture w-[35%] relative">
+    <div>
+      <img
+        class="rounded-[50%]"
+        src="../../assets/images/data/{{ dataArray.profile }}"
+        alt="pic"
+      /></div>
+    <div class="absolute animate-bounce flex justify-center items-center shadow-sm shadow-[grey] bg-[#fff3cc] p-4 w-[70px] rounded-full top-10 -right-24">
+      <img  src="../../assets/images/firebase.webp" alt="fb">
+    </div>
+    <div class="absolute animate-bounce flex justify-center items-center shadow-sm shadow-[grey] bg-[#cde7f6] p-4 w-16 rounded-full -top-8 -left-10">
+      <img  src="../../assets/images/material-ui.webp" alt="md">
+    </div>
+    <div class="absolute animate-bounce flex justify-center items-center shadow-sm shadow-[grey] bg-[#bad6f1] p-4 w-16 rounded-full top-1/2 -right-28">
+      <img  src="../../assets/images/typescript.webp" alt="ts">
+    </div>
+    <div class="absolute animate-bounce flex justify-center items-center shadow-sm shadow-[grey] bg-[#c5e8f1] p-4 w-14 rounded-full -bottom-20 right-20">
+      <img  src="../../assets/images/tailwindcss.webp" alt="tws">
+    </div>
+
   </div>
 </section>
 
-<section class="about px-[20vw] py-10 mb-20" id="aboutme">
-  <div class="mb-10 text-center text-[24px]">
-    <span class="border-b-2 border-tertiary">ABOUT ME</span>
+<section class="about px-[20vw] pb-10 mb-20" id="aboutme">
+  <!-- <img src="../../assets/images/new.svg" alt="ul"  class="w-40"/> -->
+
+  <div class="mb-10 relative text-center text-[24px] flex flex-col items-center">
+    <span class="" #aboutMeWidth>ABOUT ME</span>
+    <app-svg [width]="getAboutMeWidth()" class=""></app-svg>
+
   </div>
 
   <div class="details mb-4">
     <span class="name block">I'm {{ dataArray.fname }}</span>
-    <span class="">Full Stack Developer</span>
+    <span class="">{{ dataArray.skill }}</span>
   </div>
   <div class="bio mb-4">
-    I am a Full-Stack developer. I am currently pursuing Computer Science from
-    LPU Punjab. I am very passionate about improving my coding skills &
-    developing applications & websites. I build WebApps and Websites using MERN
-    Stack. Love to solve real life problems with my experience and knowledge.
+    <span> {{ dataArray.description }} </span>
   </div>
   <div class="details mb-6">
     <div class="mail"><span class="">Email: </span>{{ dataArray.mail }}</div>
@@ -133,9 +150,67 @@
   </div>
 </section>
 
+<section class="skills mb-20" id="skills">
+  <!-- Other content -->
+  <div class="relative mb-20 lg:container sm:mx-4 lg:mx-auto lg:w-5/6 2xl:w-3/4 wrap overflow-hidden p-4 md:py-10 md:px-0">
+    <div class="left-6 md:left-1/2 absolute border-opacity-20 border-gray-700 dark:border-grey-800 h-full border"></div>
+
+    <!-- Frontend Technologies -->
+    <div class="skills-category">
+      <h2>Frontend Technologies</h2>
+      <div class="skills-list">
+        <div *ngFor="let technology of dataArray.stack.frontend.technologies" class="technology">
+          <img [src]="'../../assets/images/' + technology.logo" [alt]="technology.name" />
+          <span>{{ technology.name }}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Backend Technologies -->
+    <div class="skills-category">
+      <h2>Backend Technologies</h2>
+      <div class="skills-list">
+        <div *ngFor="let technology of dataArray.stack.backend.technologies" class="technology">
+          <img [src]="'../../assets/images/' + technology.logo" [alt]="technology.name" />
+          <span>{{ technology.name }}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tools -->
+    <div class="skills-category">
+      <h2>Tools</h2>
+      <div class="skills-list">
+        <!-- Version Control -->
+        <div *ngFor="let technology of dataArray.stack.tools.versionControl" class="technology">
+          <img [src]="'../../assets/images/' + technology.logo" [alt]="technology.name" />
+          <span>{{ technology.name }}</span>
+        </div>
+        <!-- Code Editor -->
+        <div class="technology">
+          <img [src]="'../../assets/images/' + dataArray.stack.tools.codeEditor.logo" [alt]="dataArray.stack.tools.codeEditor.name" />
+          <span>{{ dataArray.stack.tools.codeEditor.name }}</span>
+        </div>
+        <!-- Deployment -->
+        <div *ngFor="let technology of dataArray.stack.tools.deployment" class="technology">
+          <img [src]="'../../assets/images/' + technology.logo" [alt]="technology.name" />
+          <span>{{ technology.name }}</span>
+        </div>
+        <!-- Design Tools -->
+        <div *ngFor="let technology of dataArray.stack.tools.designTools" class="technology">
+          <img [src]="'../../assets/images/' + technology.logo" [alt]="technology.name" />
+          <span>{{ technology.name }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <section class="education mb-20" id="education">
-  <div class="text-center text-[24px]">
-    <span class="border-b-2 border-tertiary">My Education</span>
+  <div class="text-center mb-12 text-[24px] relative flex flex-col items-center">
+    <span #eduWidth class="">My Education</span>
+    <app-svg [width]="getEducationWidth()"></app-svg>
   </div>
   <div class="mb-10 mt-2 text-center">
     <span class=""
@@ -156,7 +231,7 @@
     >
       <div class="order-1 md:w-5/12"></div>
       <div
-        class="bg-[#ddd6fe] z-20 flex items-center order-1 justify-center w-9 h-9 rounded-full ring-8 ring-[#f2f2f2]"
+        class="bg-[#ddd6fe] flex items-center order-1 justify-center w-9 h-9 rounded-full ring-8 ring-[#f2f2f2]"
       >
         <img src="../../assets/images/edu.svg" alt="edu" />
       </div>
@@ -171,8 +246,8 @@
             >{{ item.field }} | {{ item.batch }}</span
           >
         </div>
-        <div class="w-[20%]">
-          <img src="../../assets/images/{{item.logo}}" alt="cse" />
+        <div class="w-[20%] flex justify-center items-center">
+          <img src="../../assets/images/data/{{ item.logo }}" alt="cse" />
         </div>
       </div>
     </div>

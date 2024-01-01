@@ -1,0 +1,17 @@
+.animated-path {
+    animation: dash-animation 2s linear forwards infinite;
+  }
+  
+  @keyframes dash-animation {
+    0% {
+      stroke-dashoffset: -365;
+    }
+    60% {
+      stroke-dashoffset: 180;
+    }
+    100% {
+      stroke-dashoffset: 365;
+    }
+
+  }
+  
