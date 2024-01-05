@@ -50,43 +50,51 @@
       "technologies": [
         {
           "name": "HTML",
-          "logo": "html.png"
+          "logo": "https://img.icons8.com/?size=256&id=20909&format=png"
         },
         {
           "name": "CSS",
-          "logo": "css.png"
+          "logo": "https://img.icons8.com/?size=256&id=21278&format=png"
         },
         {
           "name": "JavaScript",
-          "logo": "js.png"
+          "logo": "https://img.icons8.com/?size=256&id=108784&format=png"
         },
         {
           "name": "React",
-          "logo": "react.png"
+          "logo": "https://img.icons8.com/?size=256&id=bzf0DqjXFHIW&format=png"
         },
         {
           "name": "Bootstrap",
-          "logo": "bootstrap.png"
+          "logo": "https://img.icons8.com/?size=256&id=84710&format=png"
         },
         {
           "name": "Material UI",
-          "logo": "mui.png"
+          "logo": "https://img.icons8.com/?size=256&id=gFw7X5Tbl3ss&format=png"
+        },
+        {
+          "name": "Angular",
+          "logo": "https://img.icons8.com/?size=256&id=l9a5tcSnBwcf&format=png"
+        },
+        {
+          "name": "Tailwind CSS",
+          "logo": "https://img.icons8.com/?size=256&id=x7XMNGh2vdqA&format=png"
         }
       ]
     },
     "backend": {
       "technologies": [
         {
-          "name": "Node",
-          "logo": "node.png"
+          "name": "NodeJS",
+          "logo": "https://img.icons8.com/?size=256&id=hsPbhkOH4FMe&format=png"
         },
         {
           "name": "MongoDB",
-          "logo": "mongo.png"
+          "logo": "https://img.icons8.com/?size=80&id=8rKdRqZFLurS&format=png"
         },
         {
-          "name": "Express",
-          "logo": "express.png"
+          "name": "ExpressJS",
+          "logo": "https://img.icons8.com/?size=256&id=SDVmtZ6VBGXt&format=png"
         }
       ]
     },
@@ -94,124 +102,146 @@
       "versionControl": [
         {
           "name": "Git",
-          "logo": "git.png"
+          "logo": "https://img.icons8.com/?size=256&id=20906&format=png"
         },
         {
           "name": "GitHub",
-          "logo": "github.png"
+          "logo": "https://img.icons8.com/?size=256&id=3tC9EQumUAuq&format=png"
         }
       ],
-      "codeEditor": {
-        "name": "VS Code",
-        "logo": "vscode.png"
-      },
+      "codeEditor": [
+        {
+          "name": "VS Code",
+          "logo": "https://img.icons8.com/?size=256&id=9OGIyU8hrxW5&format=png"
+        }
+      ],
       "deployment": [
         {
           "name": "Heroku",
-          "logo": "heroku.png"
+          "logo": "https://img.icons8.com/?size=256&id=4BG1xVLha5tw&format=png"
         },
         {
           "name": "Netlify",
-          "logo": "netlify.png"
+          "logo": "https://img.icons8.com/?size=256&id=sBo1RJ3rjbje&format=png"
         },
         {
           "name": "Firebase",
-          "logo": "firebase.png"
+          "logo": "https://img.icons8.com/?size=256&id=62452&format=png"
+        },
+        {
+          "name": "Vercel",
+          "logo": "https://res.cloudinary.com/lifecodes/image/upload/v1677508669/Portfolio/gd1ferzh1vbopo15yysy.svg"
         }
       ],
       "designTools": [
         {
           "name": "Figma",
-          "logo": "figma.png"
+          "logo": "https://img.icons8.com/?size=256&id=zfHRZ6i1Wg0U&format=png"
         },
         {
           "name": "Adobe XD",
-          "logo": "xd.png"
+          "logo": "https://img.icons8.com/?size=256&id=4VVL78edhbW9&format=png"
         },
         {
           "name": "Adobe Photoshop",
-          "logo": "ps.png"
+          "logo": "https://img.icons8.com/?size=256&id=13677&format=png"
         },
         {
           "name": "Adobe Illustrator",
-          "logo": "ai.png"
-        },
-        {
-          "name": "Adobe After Effects",
-          "logo": "ae.png"
+          "logo": "https://img.icons8.com/?size=256&id=13631&format=png"
         },
         {
           "name": "Adobe Premiere Pro",
-          "logo": "pr.png"
-        },
-        {
-          "name": "Adobe Lightroom",
-          "logo": "lr.png"
-        },
-        {
-          "name": "Adobe Audition",
-          "logo": "au.png"
-        },
-        {
-          "name": "Adobe InDesign",
-          "logo": "id.png"
-        },
-        {
-          "name": "Adobe Dreamweaver",
-          "logo": "dw.png"
+          "logo": "https://img.icons8.com/?size=256&id=e57Y1CnsOasB&format=png"
         }
       ]
     }
   },
-  
+
   "projects": [
     {
-      "name": "Patient Management System",
-      "description": "A web application for managing patients in a hospital. It is a full stack application built using MERN Stack.",
-      "link": "",
-      "github": "",
-      "image": "pms.png",
-      "stack": ["React", "Node", "Express", "MongoDB", "Material U"]
+      "category": "MERN_MEAN",
+      "project": [
+        {
+          "name": "Patient Management System",
+          "description": "A web application for managing patients in a hospital. It is a full stack application built using MERN Stack.",
+          "link": "",
+          "github": "",
+          "image": "profile.jpeg",
+          "stack": ["React", "Node", "Express", "MongoDB", "Material U"]
+        },
+        {
+          "name": "Quiz Web App",
+          "description": "A web application for taking quiz. It is a Web application built using Angular and Firebase.",
+          "link": "",
+          "github": "",
+          "image": "profile.jpeg",
+          "stack": ["Angular", "Firebase", "HTML", "CSS", "JavaScript"]
+        }
+      ]
     },
     {
-      "name": "RARA AI",
-      "description": "A Chrome Extension that helps you to get the response of your query in the popup window. It is built using JavaScript.",
-      "link": "",
-      "github": "",
-      "image": "rara.png",
-      "stack": ["JavaScript", "HTML", "CSS"]
+      "category": "Application",
+      "project": [
+        {
+          "name": "Number System Converter",
+          "description": "An app for converting numbers from one system to another. It is an application built using python.",
+          "link": "",
+          "github": "",
+          "image": "profile.jpeg",
+          "stack": ["Python"]
+        }
+      ]
     },
     {
-      "name": "Electricity Billing System",
-      "description": "A web application for managing electricity bills. It is a Frontend application built using HTML, CSS, JavaScript.",
-      "link": "",
-      "github": "",
-      "image": "ebs.png",
-      "stack": ["HTML", "CSS", "JavaScript"]
+      "category": "Frontend",
+      "project": [
+        {
+          "name": "Electricity Billing System",
+          "description": "A web application for managing electricity bills. It is a Frontend application built using HTML, CSS, JavaScript.",
+          "link": "",
+          "github": "",
+          "image": "profile.jpeg",
+          "stack": ["HTML", "CSS", "JavaScript"]
+        }
+      ]
     },
     {
-      "name": "Number System Converter",
-      "description": "An app for converting numbers from one system to another. It is an application built using python.",
-      "link": "",
-      "github": "",
-      "image": "nsc.png",
-      "stack": ["Python"]
-    },
-    {
-      "name": "Sanfoundry Quiz Scrapper",
-      "description": "A Chrome Extension that helps you to get the json data of the quiz in clipboard. It is built using JavaScript.",
-      "link": "",
-      "github": "",
-      "image": "sf.png",
-      "stack": ["JavaScript", "HTML", "CSS"]
-    },
-    {
-      "name": "Quiz Web App",
-      "description": "A web application for taking quiz. It is a Web application built using Angular and Firebase.",
-      "link": "",
-      "github": "",
-      "image": "quiz.png",
-      "stack": ["Angular", "Firebase", "HTML", "CSS", "JavaScript"]
+      "category": "Chrome_Extensions",
+      "project": [
+        {
+          "name": "RARA AI",
+          "description": "A Chrome Extension that helps you to get the response of your query in the popup window. It is built using JavaScript.",
+          "link": "",
+          "github": "",
+          "image": "profile.jpeg",
+          "stack": ["JavaScript", "HTML", "CSS"]
+        },
+        {
+          "name": "Sanfoundry Quiz Scrapper",
+          "description": "A Chrome Extension that helps you to get the json data of the quiz in clipboard. It is built using JavaScript.",
+          "link": "",
+          "github": "",
+          "image": "profile.jpeg",
+          "stack": ["JavaScript", "HTML", "CSS"]
+        },
+        {
+          "name": "UMS Auto Login",
+          "description": "A Chrome Extension that helps you to login to your UMS account automatically. It is built using JavaScript. Only for LPU Students.",
+          "link": "",
+          "github": "",
+          "image": "profile.jpeg",
+          "stack": ["JavaScript", "HTML", "CSS"]
+        },
+        {
+          "name": "LPU Wifi Auto Login",
+          "description": "A Chrome Extension that helps you to login to your LPU Wifi automatically. It is built using JavaScript. Only for LPU Students.",
+          "link": "",
+          "github": "",
+          "image": "profile.jpeg",
+          "stack": ["JavaScript", "HTML", "CSS"]
+        }
+      ]
     }
   ]
 }

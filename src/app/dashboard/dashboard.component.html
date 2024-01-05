@@ -4,7 +4,7 @@
 
 <section
   id="home"
-  class="relative home px-[10%] pt-[23vh] pb-[20vh] text-secondary flex justify-between items-center"
+  class="relative home px-[10%] pt-[23vh] pb-[22vh] text-secondary flex justify-between items-center"
 >
   <div class="absolute -z-10 min-h-screen h-full w-full left-0">
     <img
@@ -32,14 +32,20 @@
   />
 
   <div class="welcome">
-    <div class="font-bold">
-      <h1>Hi There!</h1>
-      <h1>
+    <div class="my-2 text-xl font-medium">
+      <span class="flex items-center py-2"
+        ><img
+          src="../../assets/images/waving-hand.1da6fc7a.gif"
+          alt="waving-hand"
+          class="w-[30px] pb-2 mr-2"
+        />Hey</span
+      >
+      <h1 class="text-4xl md:text-6xl font-bold pt-3">
         I'm <span class="text-tertiary">{{ dataArray.name }}</span>
       </h1>
     </div>
-    <div class="skills flex">
-      <span class="pr-3"> I am into </span>
+    <div class="skills flex my-2 items-center">
+      <span class="pr-3 text-2xl"> I am into </span>
       <ngx-typed-js
         [strings]="dataArray.skillArray"
         [loop]="true"
@@ -47,15 +53,18 @@
         [typeSpeed]="50"
         [backSpeed]="50"
       >
-        <span class="typing text-[#940808]"></span>
+        <span class="typing text-[#940808] text-2xl font-semibold"></span>
       </ngx-typed-js>
     </div>
-    <div>
-      <button (click)="toAbout()" class="py-2 px-5 bg-white rounded-[20px]">
+    <div class="my-2">
+      <button
+        (click)="toAbout()"
+        class="py-2 px-5 bg-white rounded-[20px] border-2 border-secondary"
+      >
         About Me
       </button>
     </div>
-    <div class="socialIcons">
+    <div class="socialIcons my-4">
       <ul class="flex gap-[10px]">
         <li class="">
           <a
@@ -104,44 +113,59 @@
     <div>
       <img
         class="rounded-[50%]"
-        src="../../assets/images/data/{{ dataArray.profile }}"
+        src="../../assets/images/user/{{ dataArray.profile }}"
         alt="pic"
-      /></div>
-    <div class="absolute animate-bounce flex justify-center items-center shadow-sm shadow-[grey] bg-[#fff3cc] p-4 w-[70px] rounded-full top-10 -right-24">
-      <img  src="../../assets/images/firebase.webp" alt="fb">
+      />
     </div>
-    <div class="absolute animate-bounce flex justify-center items-center shadow-sm shadow-[grey] bg-[#cde7f6] p-4 w-16 rounded-full -top-8 -left-10">
-      <img  src="../../assets/images/material-ui.webp" alt="md">
+    <div
+      class="absolute animate-bounce flex justify-center items-center shadow-md bg-[#fff3cc] p-4 w-[70px] rounded-full top-10 -right-24"
+    >
+      <img src="../../assets/images/firebase.webp" alt="fb" />
     </div>
-    <div class="absolute animate-bounce flex justify-center items-center shadow-sm shadow-[grey] bg-[#bad6f1] p-4 w-16 rounded-full top-1/2 -right-28">
-      <img  src="../../assets/images/typescript.webp" alt="ts">
+    <div
+      class="absolute animate-bounce flex justify-center items-center shadow-md bg-[#cde7f6] p-4 w-16 rounded-full -top-8 -left-10"
+    >
+      <img src="../../assets/images/material-ui.webp" alt="md" />
     </div>
-    <div class="absolute animate-bounce flex justify-center items-center shadow-sm shadow-[grey] bg-[#c5e8f1] p-4 w-14 rounded-full -bottom-20 right-20">
-      <img  src="../../assets/images/tailwindcss.webp" alt="tws">
+    <div
+      class="absolute animate-bounce flex justify-center items-center shadow-md bg-[#bad6f1] p-4 w-16 rounded-full top-1/2 -right-28"
+    >
+      <img src="../../assets/images/typescript.webp" alt="ts" />
     </div>
-
+    <div
+      class="absolute animate-bounce flex justify-center items-center shadow-md bg-[#c5e8f1] p-4 w-14 rounded-full -bottom-20 right-20"
+    >
+      <img src="../../assets/images/tailwindcss.webp" alt="tws" />
+    </div>
   </div>
 </section>
 
 <section class="about px-[20vw] pb-10 mb-20" id="aboutme">
   <!-- <img src="../../assets/images/new.svg" alt="ul"  class="w-40"/> -->
 
-  <div class="mb-10 relative text-center text-[24px] flex flex-col items-center">
-    <span class="" #aboutMeWidth>ABOUT ME</span>
+  <div
+    class="mb-10 relative text-center text-[24px] flex flex-col items-center"
+  >
+    <span class="text-3xl" #aboutMeWidth>About Me</span>
     <app-svg [width]="getAboutMeWidth()" class=""></app-svg>
-
   </div>
 
-  <div class="details mb-4">
-    <span class="name block">I'm {{ dataArray.fname }}</span>
-    <span class="">{{ dataArray.skill }}</span>
+  <div class="details mb-4 mt-16">
+    <span class="name block text-2xl font-semibold"
+      >I'm {{ dataArray.fname }}</span
+    >
+    <span class="text-secondary">{{ dataArray.skill }}</span>
   </div>
   <div class="bio mb-4">
     <span> {{ dataArray.description }} </span>
   </div>
   <div class="details mb-6">
-    <div class="mail"><span class="">Email: </span>{{ dataArray.mail }}</div>
-    <div class="place"><span class="">Place: </span>{{ dataArray.place }}</div>
+    <div class="mail">
+      <span class="text-secondary">Email: </span>{{ dataArray.mail }}
+    </div>
+    <div class="place">
+      <span class="text-secondary">Place: </span>{{ dataArray.place }}
+    </div>
   </div>
   <div class="resumeButton">
     <button class="py-2 px-5 rounded-[20px] border-2 border-tertiary">
@@ -151,65 +175,227 @@
 </section>
 
 <section class="skills mb-20" id="skills">
-  <!-- Other content -->
-  <div class="relative mb-20 lg:container sm:mx-4 lg:mx-auto lg:w-5/6 2xl:w-3/4 wrap overflow-hidden p-4 md:py-10 md:px-0">
-    <div class="left-6 md:left-1/2 absolute border-opacity-20 border-gray-700 dark:border-grey-800 h-full border"></div>
-
-    <!-- Frontend Technologies -->
-    <div class="skills-category">
-      <h2>Frontend Technologies</h2>
-      <div class="skills-list">
-        <div *ngFor="let technology of dataArray.stack.frontend.technologies" class="technology">
-          <img [src]="'../../assets/images/' + technology.logo" [alt]="technology.name" />
-          <span>{{ technology.name }}</span>
-        </div>
-      </div>
+  <div
+    class="text-center mb-12 text-[24px] relative flex flex-col items-center"
+  >
+    <span #skillWidth class="text-3xl">My Skills</span>
+    <app-svg [width]="getSkillWidth()"></app-svg>
+  </div>
+  <!-- <div class="mb-10 mt-2 text-center">
+    <span class=""
+      >The expert in anything was once a beginner. So, I'm a beginner in
+      everything.</span
+    >
+  </div> -->
+  <div
+    class="relative mb-20 lg:container sm:mx-4 lg:mx-auto lg:w-5/6 2xl:w-3/4 wrap overflow-hidden p-4 pt-0 md:pb-10 md:px-0"
+  >
+    <div
+      class="md:w-1/2 overflow-x-auto scroll-hide lg:w-1/3 mx-auto bg-[#f1f1f1] dark:bg-grey-800 p-2 mt-0 mb-4 flex justify-between items-center gap-3 rounded-md"
+    >
+      <span
+        (click)="selectStack('frontend')"
+        [class.skillActive]="selectedStack == 'frontend'"
+        class="p-1.5 md:p-2 text-sm md:text-base w-full text-center cursor-pointer rounded-md dark:bg-grey-800 hover:bg-gray-300 hover:dark:bg-grey-900 transition-all capitalize"
+        >Frontend</span
+      ><span
+        (click)="selectStack('backend')"
+        [class.skillActive]="selectedStack == 'backend'"
+        class="p-1.5 md:p-2 text-sm md:text-base w-full text-center cursor-pointer rounded-md dark:bg-grey-800 hover:bg-gray-300 hover:dark:bg-grey-900 transition-all capitalize"
+        >Backend</span
+      ><span
+        (click)="selectStack('others')"
+        [class.skillActive]="selectedStack == 'others'"
+        class="p-1.5 md:p-2 text-sm md:text-base w-full text-center cursor-pointer rounded-md dark:bg-grey-800 hover:bg-gray-300 hover:dark:bg-grey-900 transition-all capitalize"
+        >Others</span
+      >
     </div>
 
-    <!-- Backend Technologies -->
-    <div class="skills-category">
-      <h2>Backend Technologies</h2>
-      <div class="skills-list">
-        <div *ngFor="let technology of dataArray.stack.backend.technologies" class="technology">
-          <img [src]="'../../assets/images/' + technology.logo" [alt]="technology.name" />
-          <span>{{ technology.name }}</span>
+    <section *ngIf="selectedStack === 'frontend'">
+      <div class="flex flex-wrap justify-center px-[10%]">
+        <div
+          *ngFor="let tech of dataArray.stack.frontend.technologies"
+          class="m-2 p-4 basis-1/6 flex justify-center flex-col items-center"
+        >
+          <div
+            class="h-24 w-24 mb-2 flex justify-center items-center p-6 rounded-full bg-[#f6f6f6] shadow-md"
+          >
+            <img [src]="tech.logo" [alt]="tech.name" />
+          </div>
+          <p class="text-center pt-1">{{ tech.name }}</p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Tools -->
-    <div class="skills-category">
-      <h2>Tools</h2>
-      <div class="skills-list">
-        <!-- Version Control -->
-        <div *ngFor="let technology of dataArray.stack.tools.versionControl" class="technology">
-          <img [src]="'../../assets/images/' + technology.logo" [alt]="technology.name" />
-          <span>{{ technology.name }}</span>
-        </div>
-        <!-- Code Editor -->
-        <div class="technology">
-          <img [src]="'../../assets/images/' + dataArray.stack.tools.codeEditor.logo" [alt]="dataArray.stack.tools.codeEditor.name" />
-          <span>{{ dataArray.stack.tools.codeEditor.name }}</span>
-        </div>
-        <!-- Deployment -->
-        <div *ngFor="let technology of dataArray.stack.tools.deployment" class="technology">
-          <img [src]="'../../assets/images/' + technology.logo" [alt]="technology.name" />
-          <span>{{ technology.name }}</span>
-        </div>
-        <!-- Design Tools -->
-        <div *ngFor="let technology of dataArray.stack.tools.designTools" class="technology">
-          <img [src]="'../../assets/images/' + technology.logo" [alt]="technology.name" />
-          <span>{{ technology.name }}</span>
+    <section *ngIf="selectedStack === 'backend'">
+      <div class="flex flex-wrap justify-center px-[10%]">
+        <div
+          *ngFor="let tech of dataArray.stack.backend.technologies"
+          class="m-2 p-4 basis-1/6 flex justify-center flex-col items-center"
+        >
+          <div
+            class="h-24 w-24 mb-2 flex justify-center items-center p-6 rounded-full bg-[#f6f6f6] shadow-md"
+          >
+            <img [src]="tech.logo" [alt]="tech.name" />
+          </div>
+          <p class="text-center pt-1">{{ tech.name }}</p>
         </div>
       </div>
-    </div>
+    </section>
+
+    <section *ngIf="selectedStack === 'others'">
+      <div class="flex flex-wrap justify-center px-[10%]">
+        <div
+          *ngFor="let tech of dataArray.stack.tools.designTools"
+          class="m-2 p-4 basis-1/6 flex justify-center flex-col items-center"
+        >
+          <div
+            class="h-24 w-24 mb-2 flex justify-center items-center p-6 rounded-full bg-[#f6f6f6] shadow-md"
+          >
+            <img [src]="tech.logo" [alt]="tech.name" />
+          </div>
+          <p class="text-center pt-1">{{ tech.name }}</p>
+        </div>
+        <!--  generate dataArray.stack.tools.deplyment, dataArray.stack.tools.versionControl, dataArray.stack.tools.codeEditor with good css -->
+
+        <div
+          *ngFor="let tech of dataArray.stack.tools.deployment"
+          class="m-2 p-4 basis-1/6 flex justify-center flex-col items-center"
+        >
+          <div
+            class="h-24 w-24 mb-2 flex justify-center items-center p-6 rounded-full bg-[#f6f6f6] shadow-md"
+          >
+            <img [src]="tech.logo" [alt]="tech.name" />
+          </div>
+          <p class="text-center pt-1">{{ tech.name }}</p>
+        </div>
+
+        <div
+          *ngFor="let tech of dataArray.stack.tools.versionControl"
+          class="m-2 p-4 basis-1/6 flex justify-center flex-col items-center"
+        >
+          <div
+            class="h-24 w-24 mb-2 flex justify-center items-center p-6 rounded-full bg-[#f6f6f6] shadow-md"
+          >
+            <img [src]="tech.logo" [alt]="tech.name" />
+          </div>
+          <p class="text-center pt-1">{{ tech.name }}</p>
+        </div>
+
+        <div
+          *ngFor="let tech of dataArray.stack.tools.codeEditor"
+          class="m-2 p-4 basis-1/6 flex justify-center flex-col items-center"
+        >
+          <div
+            class="h-24 w-24 mb-2 flex justify-center items-center p-6 rounded-full bg-[#f6f6f6] shadow-md"
+          >
+            <img [src]="tech.logo" [alt]="tech.name" />
+          </div>
+          <p class="text-center pt-1">{{ tech.name }}</p>
+        </div>
+      </div>
+    </section>
   </div>
 </section>
 
+<section id="project">
+  <!-- access project data from dataArray -->
+  <div
+    class="text-center mb-12 text-[24px] relative flex flex-col items-center"
+  >
+    <span #projectWidth class="text-3xl">My Projects</span>
+    <app-svg [width]="getProjectWidth()"></app-svg>
+  </div>
+  <div
+    class="relative mb-20 lg:container sm:mx-4 lg:mx-auto lg:w-5/6 2xl:w-3/4 wrap overflow-hidden p-4 md:pb-10 md:px-0"
+  >
+    <div
+      class="scrollCSS overflow-x-auto scroll-hide w-3/5 mx-auto bg-[#f1f1f1] dark:bg-grey-800 p-2 mt-0 mb-4 flex justify-between items-center gap-3 rounded-md"
+    >
+      <span
+        (click)="selectProject(project.category)"
+        [class.skillActive]="selectedProject === project.category"
+        class="p-1.5 md:p-2 text-sm md:text-base w-full text-center cursor-pointer rounded-md dark:bg-grey-800 hover:bg-gray-300 hover:dark:bg-grey-900 transition-all capitalize"
+        *ngFor="let project of dataArray.projects"
+      >
+        {{ project.category }}
+      </span>
+    </div>
+
+    <section *ngFor="let project of dataArray.projects">
+      <section *ngIf="selectedProject == project.category">
+        <div class="flex flex-wrap justify-center px-[10%]">
+          <div
+            *ngFor="let tech of project.project"
+            class="m-2 p-2 basis-[30%] flex flex-col items-center border shadow-md rounded-md"
+          >
+            <div class="relative w-full mb-2 flex justify-center items-center">
+              <img
+                [src]="'../assets/images/user/' + tech.image"
+                [alt]="tech.name"
+                class="h-40 w-full object-cover object-top rounded-lg"
+              />
+              <div
+                class="absolute w-full h-40 mb-2 rounded-lg flex flex-col justify-between top-0 left-0 p-4 text-gray-300 from-black bg-gradient-to-t opacity-0 transition-opacity duration-300 hover:opacity-100"
+              >
+                <div>
+                  <a
+                    class="bg-white rounded-[50%] w-[45px] h-[45px] list-none flex items-center justify-center cursor-pointer"
+                    [href]="tech.github"
+                    target="_blank"
+                    ><i class="fa-solid fa-github text-black w-full h-full"></i
+                  ></a>
+                </div>
+                <span class="text-start text-xs">{{ tech.description }}</span>
+                <!-- <span> {{tech.stack}} </span> -->
+              </div>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-start pt-1">{{ tech.name }}</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- <div class="mb-10 flex flex-wrap justify-center">
+      <div
+        *ngFor="let tech of dataArray.projects"
+
+        class="m-2 p-4 basis-[30%] flex justify-center flex-col items-center rounded-lg shadow-xl border"
+      >
+        <div
+          class="h-24 w-24 mb-2 flex justify-center items-center p-6 rounded-full bg-[#f6f6f6] shadow-md"
+        >
+          <img
+            [src]="'../assets/images/user/' + tech.image"
+            [alt]="tech.name"
+          />
+        </div>
+        <p class="pt-1 text-xl w-full">{{ tech.name }}</p>
+        <p class="text-center pt-1">{{ tech.description }}</p>
+        <div class="flex items-center flex-wrap">
+          <span class="font-semibold">Tech Stack: </span>
+          <ng-container *ngFor="let item of tech.stack; let last = last">
+            <span class="text-center text-[#5f5f5f]"
+              >{{ item }}{{ !last ? ", " : "" }}</span
+            >
+          </ng-container>
+        </div>
+      </div>
+    </div> -->
+  </div>
+
+  <div class="flex justify-center">
+    <button class="py-2 px-5 bg-white rounded-[20px]">View All</button>
+  </div>
+</section>
 
 <section class="education mb-20" id="education">
-  <div class="text-center mb-12 text-[24px] relative flex flex-col items-center">
-    <span #eduWidth class="">My Education</span>
+  <div
+    class="text-center mb-12 text-[24px] relative flex flex-col items-center"
+  >
+    <span #eduWidth class="text-3xl">My Education</span>
     <app-svg [width]="getEducationWidth()"></app-svg>
   </div>
   <div class="mb-10 mt-2 text-center">
@@ -247,7 +433,7 @@
           >
         </div>
         <div class="w-[20%] flex justify-center items-center">
-          <img src="../../assets/images/data/{{ item.logo }}" alt="cse" />
+          <img src="../../assets/images/user/{{ item.logo }}" alt="cse" />
         </div>
       </div>
     </div>

@@ -15,15 +15,18 @@
 *{
     margin: 0;
     padding: 0;
-    /* font-family: "Poppins", sans-serif; */
-    font-family: "Poppins", cursive;
+    font-family: "poppins", sans-serif;
+    /* font-family: "Poppins", cursive; */
+    /* font-family: ; */
 }
 
-body::-webkit-scrollbar{
+.scrollCSS::-webkit-scrollbar{
+    height: 8px;
     width: 8px;
 }
 
-body::-webkit-scrollbar-thumb{
+.scrollCSS::-webkit-scrollbar-thumb{
+    border-radius: 8px;
     background-color: var(--bg-secondary);
 }
 

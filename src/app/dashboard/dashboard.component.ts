@@ -8,6 +8,8 @@ import {
 import { SharedService } from '../shared/shared.service';
 import { DOCUMENT } from '@angular/common';
 
+// import ColorPicker from '../js/ColorPicker';
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -19,6 +21,7 @@ export class DashboardComponent implements OnInit {
   @ViewChild('aboutMeWidth') aboutMeWidth!: ElementRef;
   @ViewChild('eduWidth') eduWidth!: ElementRef;
   @ViewChild('skillWidth') skillWidth!: ElementRef;
+  @ViewChild('projectWidth') projectWidth!: ElementRef;
 
   constructor(
     private sharedService: SharedService,
@@ -29,6 +32,16 @@ export class DashboardComponent implements OnInit {
     this.sharedService.getData().subscribe((data) => {
       this.dataArray = data;
     });
+  }
+
+  selectedStack: string = 'frontend';
+  selectStack(stack: string) {
+    this.selectedStack = stack;
+  }
+
+  selectedProject: string = 'MERN_MEAN';
+  selectProject(project: string) {
+    this.selectedProject = project;
   }
 
   toAbout() {
@@ -77,6 +90,15 @@ export class DashboardComponent implements OnInit {
       const skillSpanWidth = this.skillWidth.nativeElement.offsetWidth;
       // You can perform additional calculations or adjustments here if needed
       return skillSpanWidth + 60;
+    }
+    return 150; // Default width if the span element is not available
+  }
+
+  getProjectWidth(): number {
+    if (this.projectWidth && this.projectWidth.nativeElement) {
+      const projectSpanWidth = this.projectWidth.nativeElement.offsetWidth;
+      // You can perform additional calculations or adjustments here if needed
+      return projectSpanWidth + 60;
     }
     return 150; // Default width if the span element is not available
   }

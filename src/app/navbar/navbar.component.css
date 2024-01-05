@@ -24,7 +24,7 @@
 a{
     color: var(--bg-primary);
     letter-spacing: 0.04rem;
-    font-weight: 600;
+    /* font-weight: 600; */
     text-decoration: none;
 }
 
